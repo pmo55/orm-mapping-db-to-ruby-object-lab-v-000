@@ -41,6 +41,8 @@ class Student
     DB[:conn].execute(sql)
   end
   def self.new_from_db(row)
-    
+    student = self.new
+    student.name=row[1]
+    student.grade=row[2]
   end
 end
