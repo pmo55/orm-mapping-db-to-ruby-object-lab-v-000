@@ -49,6 +49,12 @@ class Student
   end
   
   def self.find_by_name(name)
+    sql= <<-SQL
+    Select *
+    FROM students
+    Where name= ?
+    LIMIT 1
+    SQL
     
 
 end
