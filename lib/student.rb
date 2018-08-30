@@ -55,6 +55,6 @@ class Student
     Where name= ?
     LIMIT 1
     SQL
-    DB[]
+    DB[:conn].execute(sql, name)
 
 end
