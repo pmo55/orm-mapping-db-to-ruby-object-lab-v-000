@@ -96,7 +96,7 @@ end
     sql = <<-SQL
     SELECT *
     FROM students
-    WHICH grade = 10
+    WHERE grade = 10
     LIMIT ?
     SQL
     DB[:conn].execute(sql, x).map do |row|
